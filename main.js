@@ -1,12 +1,12 @@
+//Task 2
 fetch('https://www.course-api.com/javascript-store-products') //Gets the products from the API
    .then(response => response.json()) 
    .then(data => displayProducts(data)) 
    .catch(error => {
-    //Handles any errors that may occur
+    //Task 4 -Handles any errors that may occur
        console.error('Error! Unable to fetch products:', error); 
        document.getElementById('productContainer').innerHTML = '<p>Unable to load products. Please try again later.</p>';
    });
-
 function displayProducts(products) {
     const productContainer = document.getElementById('productContainer');
     productContainer.innerHTML = ''; 
